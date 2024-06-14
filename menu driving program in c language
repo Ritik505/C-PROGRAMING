@@ -1,0 +1,36 @@
+int main() {
+    int num1,num2,op,res;
+    printf("Enter first number:");
+    scanf("%d",&num1);
+    printf("Enter a second number:");
+    scanf("%d",&num2);
+    printf("press 1-Add 2-subtract 3-multiply 4-divide");
+    scanf("%d",&op);
+    switch(op)
+    {
+        case  1:
+        res = num1 + num2;
+        printf("sum is  %d",res);
+        break;
+        case 2:
+        res = num1 - num2;
+        printf("difference is %d",res);
+        break;
+        case  3:
+        res = num1 * num2;
+        printf("product is  %d",res);
+        break;
+        case  4:
+        res = num1 / num2;
+        printf("quotient is  %d",res);
+        break;
+        
+        default:
+        printf("not a va;id  option");
+        
+        
+        
+    }
+
+    return 0;
+}
