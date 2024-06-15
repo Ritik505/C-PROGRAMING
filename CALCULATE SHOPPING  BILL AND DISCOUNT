@@ -1,0 +1,18 @@
+int main()
+{
+    int cost , qty , amt , dis , netamt;
+    printf("\n Enter cost of product:");
+    scanf("%d",&cost,&qty);
+    printf("\n quantity of product:");
+    scanf("%d",&qty);
+    
+    amt = cost * qty;
+    dis = 10 * amt/100;            ;
+    netamt = amt - dis;
+    
+    printf("\n amount is %d",amt);
+    printf("\n discount is %d",dis);
+    printf("\n Net amount is %d",netamt);
+
+    return 0;
+}
