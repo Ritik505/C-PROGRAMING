@@ -1,0 +1,15 @@
+int main() {
+    int age;
+    printf("Enter age:");
+    scanf("%d",&age);
+    if (age >= 18)
+    { 
+        printf("You are eligiable to apply");
+    }
+    { 
+        if(age<18)
+    printf("\n You have to try again after %d years",18 - age);
+    }
+
+    return 0;
+}
