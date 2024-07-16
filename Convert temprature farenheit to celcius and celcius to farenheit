@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    float C,F;
+    int n;
+    printf("\nPress  1-To convert Farenheit to Celcius");
+    printf("\nPress  2-To convert Celcius to Farenheit");
+    scanf("%d",&n);
+    if(n == 1)
+    {
+        printf("Enter thr temprature in Farenheit: ");
+        scanf("%f",&F);
+        C = (F - 32) * 5/9;
+        printf("\nTemprature in Celcius is %2.f",C);
+    }
+    else if (n ==2)
+    {
+        printf("Enter the temprature in Celcius: ");
+        scanf("%f",&C);
+        F = C * 9/5 + 32;
+        printf("\nTemprature in Farenheit is %2.f",F);
+    }
+    else
+    {
+        printf("\nInvalid option selected");
+    }
+    
+    return 0;
+}
