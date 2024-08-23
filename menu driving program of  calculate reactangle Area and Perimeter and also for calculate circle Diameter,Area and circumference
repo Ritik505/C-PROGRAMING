@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main() {
+    int opt,l,b,a,p,n;
+    float ar,r,c,d;
+    printf("\nPress 1-Rectangle 2-circle: ");
+    scanf("%d",&opt);
+    switch(opt)
+    {
+        case 1:
+        printf("\nEnter length of rectangle: ");
+        scanf("%d",&l);
+        printf("\nEnter breadth of rectangle: ");
+        scanf("%d",&b);
+        printf("\nPress 1-Area 2-perimeter: ");
+        scanf("%d",&n);
+        switch(n)
+        {
+            case 1:
+            a = l*b;
+            printf("\nArea is %d",a);
+            break;
+            case 2:
+            p = 2*(l+b);
+            printf("\nPerimeter is %d",p);
+            break;
+            default:
+            printf("\nNot an option");
+        }
+        break;
+        case 2:
+        printf("\nEnter radius: ");
+        scanf("%f",&r);
+        printf("\nPress 1-Diameter 2-Area 3-circumferece: ");
+        scanf("%d",&n);
+        switch(n)
+        {
+            case 1:
+            d = 2*r;
+            printf("\n Diameter is %f",d);
+            break;
+            case 2:
+            ar = 3.14*r*r;
+            printf("\n Area is %f",ar);
+            break;
+            case 3:
+            c = 2 * 3.14 * r;
+            printf("\n circumference is %f",c);
+            break;
+            default:
+            printf("\nWrong option");
+        }
+        break;
+        default:
+        printf("\nInvalid option");
+    }
+    return 0;
+}
