@@ -1,0 +1,20 @@
+#include <stdio.h>
+#define SQUARE(x) ((x) * (x))
+#define ADD(x,y) ((x) + (y))
+#define NESTED_CALCULATION(a,b,c) SQUARE(ADD(a,b) * (c))
+
+int main() {
+    int a, b, c, result;
+
+    printf("Enter first integer: ");
+    scanf("%d", &a);
+    printf("Enter second integer: ");
+    scanf("%d", &b);
+    printf("Enter third integer: ");
+    scanf("%d", &c);
+
+    result = NESTED_CALCULATION(a, b, c);
+    printf("Result is: %d\n", result);
+
+    return 0;
+}
