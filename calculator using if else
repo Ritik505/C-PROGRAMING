@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, res;
+    char op;
+    
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+    
+    
+    printf("Enter the operator (+,-,*,/) : ");
+    scanf(" %c", &op);  
+    if (op == '+') {
+        res = a + b;
+        printf("%d + %d = %d\n", a, b, res);
+    } 
+    else if (op == '-') {
+        res = a - b;
+        printf("%d - %d = %d\n", a, b, res);
+    } 
+    else if (op == '*') {
+        res = a * b;
+        printf("%d * %d = %d\n", a, b, res);
+    } 
+    else if (op == '/') {
+        if (b != 0) {  
+            res = a / b;
+            printf("%d / %d = %d\n", a, b, res);
+        } else {
+            printf("Error: Division by zero is not allowed.\n");
+        }
+    } 
+    else {
+        printf("Invalid operator!\n");
+    }
+
+    return 0;
+}
