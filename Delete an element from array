@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int a[10] = {12, 6, 45, 78, 34, 74, 98, 1, 8, 9};
+    int i, n, pos = -1;
+
+    printf("Enter the element to delete: ");
+    scanf("%d", &n);
+
+    for (i = 0; i < 10; i++) {
+        if (a[i] == n) {
+            pos = i;
+            break;
+        }
+    }
+
+    if (pos != -1) {
+        for (i = pos; i < 9; i++) {
+            a[i] = a[i + 1];
+        }
+        a[9] = 0;
+
+        printf("Array after deletion: ");
+        for (i = 0; i < 9; i++) {
+            printf("%d ", a[i]);
+        }
+        printf("\n");
+    } else {
+        printf("Element not found in the array.\n");
+    }
+
+    return 0;
+}
