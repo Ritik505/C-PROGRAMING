@@ -1,0 +1,13 @@
+#include <stdio.h>
+void callByReference(int *x){
+    *x=10;
+}
+
+int main() {
+    int a=5;
+    callByReference(&a);
+    
+    printf("After :%d\n",a);
+    
+    return 0;
+}
