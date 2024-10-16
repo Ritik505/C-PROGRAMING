@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int i,n,n1=0,n2=1,sum;
+    printf("How many numbers to be printed: ");
+    scanf("%d",&n);
+    printf("0 1");
+    for(i=1;i<n-2;i++){
+        sum=n1+n2;
+        printf("\t%d",sum);
+        n1=n2;
+        n2=sum;
+    }
+
+    return 0;
+}
