@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char src[]="apple";
+    char dest[10];
+    char *result = strcpy(dest, src);
+    if (result == dest) {
+        printf("String copied successfully: %s\n", dest);
+    } else {
+        printf("String copy failed.\n");
+    }
+    return 0;
+}
