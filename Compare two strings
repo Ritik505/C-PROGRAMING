@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[]="apple";
+    char str2[]="orange";
+    int result = strcmp(str1,str2);
+    printf("comparision result is %d",result);
+    return 0;   
+}
