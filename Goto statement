@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int num=1;
+    start:
+    printf("Number: %d\n",num);
+    num++;
+    if(num<=5){
+        goto start;
+    }
+    printf("loop ended,num is greter than 5\n");
+
+    return 0;
+}
