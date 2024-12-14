@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+struct student {
+    int rno;
+    char name[30];
+    int marks;
+};
+
+int main() {
+    struct student a, b;
+
+    printf("Enter roll no., name, and marks of first student: ");
+    scanf("%d %s %d", &a.rno, a.name, &a.marks);
+
+    printf("Enter roll no., name, and marks of second student: ");
+    scanf("%d %s %d", &b.rno, b.name, &b.marks);
+
+    if (a.marks > b.marks)
+        printf("%s has scored more.\n", a.name);
+    else if (b.marks > a.marks)
+        printf("%s has scored more.\n", b.name);
+    else
+        printf("Both %s and %s have the same score.\n", a.name, b.name);
+
+    return 0;
+}
