@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    char *arr[3];
+    arr[0]="Hello";
+    arr[1]="world";
+    arr[2]="c";
+    printf("%s",arr[0]);
+
+    return 0;
+}
