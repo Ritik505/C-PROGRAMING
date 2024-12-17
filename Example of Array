@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(){
+    int marks[5]={34,56,76,78,54};
+    char name[5][10]={"Anuj","keshav","Rohan","Manu","Riya"};
+    for(int i=0;i<5;i++){
+        printf("%d %s %d\n",i+1,name[i],marks[i]);
+    }
+    return 0;
+}
