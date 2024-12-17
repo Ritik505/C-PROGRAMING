@@ -1,0 +1,11 @@
+#include <stdio.h>
+struct person{
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct person p1={"Ritik",20};
+    printf("Name:%s\n age:%d",p1.name,p1.age);
+    return 0;
+}
