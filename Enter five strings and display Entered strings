@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    char txt[5][50];
+    int i;
+    printf("Enter a five strings: ");
+    for(i=0;i<5;i++){
+        scanf("%s",txt[i]);
+    }
+    printf("\nEntered string are: ");
+    for(i=0;i<5;i++){
+        printf("\n%s",txt[i]);
+    }
+    return 0;
+}
