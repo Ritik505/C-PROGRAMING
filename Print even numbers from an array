@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int a[20];
+    int i;
+    printf("Enter 10 the Elements:\n  ");
+    for(i=0;i<10;i++){
+        printf("Enter %d Element: ",i+1);
+        scanf("%d",&a[i]);
+    }
+    printf("Even elements in the array are:\n");
+        for(i=0;i<10;i++){
+            if(a[i] % 2==0){
+                printf("%d\n",a[i]);
+            }
+        }
+    return 0;
+}
