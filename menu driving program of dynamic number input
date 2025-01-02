@@ -9,7 +9,7 @@ int main() {
 
     
     for (i = 0; i < numCount; i++) {
-        printf("Enter a number: ");
+        printf("Enter %d a number: ",i+1);
         scanf("%f", &numbers[i]);
         sum += numbers[i];
     }
