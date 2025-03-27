@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+    struct Node* prev;
+};
+
+int main() {
+    struct Node* head = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* second = (struct Node*)malloc(sizeof(struct Node));
+
+    head->data = 20; head->next = second; head->prev = NULL;
+    second->data = 10; second->next = NULL; second->prev = head;
+
+    struct Node* temp = head;
+    head = head->next;  
+    
+    if (head != NULL) {
+        head->prev = NULL;  
+    }
+    free(temp);  
+
+    struct Node* current = head;
+    printf("Doubly Linked List after deletion: ");
+    while (current) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+
+    return 0;
+}
