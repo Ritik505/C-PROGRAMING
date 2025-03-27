@@ -9,23 +9,19 @@ struct Node {
 int main() {
     struct Node* head = (struct Node*)malloc(sizeof(struct Node));
     struct Node* second = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* third = (struct Node*)malloc(sizeof(struct Node));
 
-    head->data = 30; head->next = second;
-    second->data = 20; second->next = third;
-    third->data = 10; third->next = NULL;
-    
+    head->data = 20; head->next = second;
+    second->data = 10; second->next = NULL;
+
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    newNode->data = 40;       
-    newNode->next = head;    
-    head = newNode;    
+    newNode->data = 30;       
+    newNode->next = head;     
+    head = newNode;
 
-    struct Node* temp = head;
-    while (temp) {
-        printf("%d -> ", temp->data);
-        temp = temp->next;
+    while (head) {
+        printf("%d -> ", head->data);
+        head = head->next;
     }
     printf("NULL\n");
-
     return 0;
 }
