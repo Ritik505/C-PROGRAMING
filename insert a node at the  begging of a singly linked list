@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {  
+    int data;  
+    struct Node* next;  
+};
+
+void printList(struct Node* head) {
+    while (head) {
+        printf("%d -> ", head->data);
+        head = head->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    struct Node* head = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* second = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* third = (struct Node*)malloc(sizeof(struct Node));
+    head->data =30; head-> next=second;
+     second->data =20; second-> next=third;
+      third->data =10; third-> next=NULL;
+       printList(head);
+    return 0;
+}
