@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define SIZE 5
+
+int stack[SIZE],top = -1;
+
+void push(int value){
+    if(top == SIZE -1){
+        printf("stack is overflow");
+    }
+    else{
+        stack[++top] = value;
+            printf("Pushed %d\n",value);
+    }
+}
+
+int main() {
+    
+    push(10);
+    push(20);
+    push(30);
+    push(40);
+    push(50);
+    push(60);
+
+    return 0;
+}
