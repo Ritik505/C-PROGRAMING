@@ -14,21 +14,16 @@ int main() {
     head->data = 20; head->next = second; head->prev = NULL;
     second->data = 10; second->next = NULL; second->prev = head;
 
-    struct Node* temp = head;
-    head = head->next;  
-    
-    if (head != NULL) {
-        head->prev = NULL;  
+    if (head) {
+        struct Node* temp = head;
+        head = head->next;  
+        free(temp);  
+        if (head) head->prev = NULL;  
     }
-    free(temp);  
-
-    struct Node* current = head;
-    printf("Doubly Linked List after deletion: ");
-    while (current) {
-        printf("%d -> ", current->data);
-        current = current->next;
-    }
-    printf("NULL\n");
+    if (head)
+        printf("Doubly Linked List: %d -> NULL\n", head->data);
+    else
+        printf("Doubly Linked List is empty.\n");
 
     return 0;
 }
