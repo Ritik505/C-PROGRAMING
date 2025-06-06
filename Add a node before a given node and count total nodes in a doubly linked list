@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+  int data;
+  struct Node *prev, *next;
+};
+
+int count(struct Node *h) {
+  int c = 0;
+  while (h) { c++; h = h->next; }
+  return c;
+}
+
+int main() {
+  struct Node *a = malloc(sizeof(struct Node));
+  struct Node *b = malloc(sizeof(struct Node));
+  a->data = 10; a->prev = NULL; a->next = b;
+  b->data = 20; b->prev = a; b->next = NULL;
+
+  struct Node *new = malloc(sizeof(struct Node));
+  new->data = 15;
+  new->prev = a; new->next = b;
+  a->next = new; b->prev = new;
+
+  printf("Nodes = %d\n", count(a));
+  return 0;
+}
