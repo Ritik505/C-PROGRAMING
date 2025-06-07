@@ -1,0 +1,63 @@
+#include <stdio.h>
+#define SIZE 5
+
+int stack[SIZE],top = -1;
+
+void pop(){
+    if(top ==  -1){
+        printf("stack is underflow\n");
+    }
+    else
+        printf("Pop %d\n",stack[top--]);
+    
+}
+
+void peek(){
+    if(top ==  -1){
+        printf("stack is Empty");
+    }
+    else
+        printf("Peek %d\n",stack[top]);
+    
+}
+
+void push(int value){
+    if(top == SIZE -1){
+        printf("stack is overflow\n");
+    }
+    else{
+        stack[++top] = value;
+            printf("Pushed %d\n",value);
+    }
+}
+
+
+void isEmpty(){
+    if(top ==  -1){
+        printf("stack is Empty\n");
+    }
+    else
+        printf("Stack is not Empty\n");
+}
+
+
+int main() {
+    
+    push(10);
+    push(20);
+    push(30);
+    pop();
+    pop();
+    pop();
+    pop();
+    push(312);
+    push(24);
+    push(10);
+    push(65);
+    push(70);
+    push(5);
+    pop();
+    peek();
+    
+    return 0;
+}
